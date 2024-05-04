@@ -5,7 +5,8 @@ MVP List
 4. Services page
 5. About Us page
 6. Contact Us page
-
+7. Loading animation is a linegraph going up
+8. 
 
 
 BACK-END DEVELOPMENT LANGUAGES:
