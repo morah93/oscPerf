@@ -6,6 +6,18 @@ import './App.css';
 function App() {
 
   const [data, setData] = useState([{}])
+  const [contacts, setContacts] = useState([])
+
+  useEffect(() => {
+    fetchContacts()
+  }, [])
+
+  const fetchContacts = async () => {
+    const response = await fetch('localhost:3000/contacts')
+    const data = await response.json()
+    setContacts(data.contacts)
+    console.log(data.contacts)
+  }
 
   useEffect(() => {
     fetch("/members").then(
@@ -22,7 +34,7 @@ function App() {
       <h1>Members</h1>
 
       {(typeof data.members === 'undefined') ? (
-        <p>....Loading</p>
+        <p>...Loading</p>
       ) : (
         data.members.map((member, i) => (
           (<p key={i}>{member}</p>
