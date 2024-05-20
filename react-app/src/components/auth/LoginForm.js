@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect, history, useHistory } from "react-router-dom";
+import { Redirect} from "react-router-dom";
+// import {  history, useHistory } from "react-router-dom";
 import { login } from "../../store/session";
 import "../homepage.css";
 
@@ -10,7 +11,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -45,12 +46,12 @@ const LoginForm = () => {
             <div key={ind}>{error}</div>
           ))}
         </div>
-        <img
+        {/* <img
           className='loginImg'
           src={
             "https://images.pexels.com/photos/1144176/pexels-photo-1144176.jpeg"
           }
-        ></img>
+        ></img> */}
         <div className="loginPgText">
           <p>Please login to share your photos and creativity with the world</p>
         </div>

@@ -6,18 +6,18 @@ from flask_cors import CORS
 app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
 CORS(app)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydatabase.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydatabase.db"
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
-@app.route("/members")
-def members():
-  return {"members": ["Melody", "Marlee", "Mohammed"] }
+# @app.route("/members")
+# def members():
+#   return {"members": ["Melody", "Marlee", "Mohammed"] }
 
 
-if __name__ == "__main__":
-  app.run(debug=True, port = 1000, host= '127.0.0.1' )
+# if __name__ == "__main__":
+#   app.run(debug=True, port = 1000, host= '127.0.0.1' )
 
 # FLASK_RUN_PORT=8000
 # export FLASK_RUN_HOST="127.0.0.1"
