@@ -1,7 +1,7 @@
 // import React, {useState, useEffect} from 'react'
 // import './App.css';
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authenticate } from "./store/session";
 
@@ -24,36 +24,36 @@ function App() {
 	return (
 		<div>
 			<BrowserRouter>
-				<NavBar />
-				<Switch>
+				{/* <NavBar /> */}
+				<Routes>
 
-					<ProtectedRoute
+					{/* <ProtectedRoute
 						path='/'
 						exact={true}
 					>
 						<HomePage />
-					</ProtectedRoute>
+					</ProtectedRoute> */}
 
-					<Route
+					{/* <Route
 						path='/adminLogin'
 						exact={true}
 					>
 						<LoginForm />
-					</Route>
+					</Route> */}
 
-					<ProtectedRoute
+					{/* <ProtectedRoute
 						path='/upload-image'
 						exact={true}
 					>
 						<UploadImage />
-					</ProtectedRoute>
+					</ProtectedRoute> */}
 
-					<Route
+					{/* <Route
 						path='/images/:imageId'
 						exact={true}
 					>
 						<DisplayOneImage />
-					</Route>
+					</Route> */}
 
 					{/* <Route
 						path='/images/:imageId'
@@ -61,9 +61,9 @@ function App() {
 					>
 						<EditImageDetails />
 					</Route> */}
-				</Switch>
+				</Routes>
 			</BrowserRouter>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }

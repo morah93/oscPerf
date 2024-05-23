@@ -44,8 +44,8 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
-from app.config import db
-from app.models import User, Image
+# from .config import db
+from app.models import db, User, Image
 # from .api.user_routes import user_routes
 # from .api.auth_routes import auth_routes
 # from .api.image_routes import image_routes
